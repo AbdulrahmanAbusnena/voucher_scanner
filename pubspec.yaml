@@ -41,6 +41,8 @@ dependencies:
   supabase_flutter: ^2.12.4
   # routing
   go_router: ^17.2.3 
+  build_runner: ^2.15.0
+  json_serializable: ^6.14.0
 
 dev_dependencies:
   flutter_test:
