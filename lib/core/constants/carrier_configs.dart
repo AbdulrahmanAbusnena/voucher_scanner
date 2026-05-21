@@ -5,7 +5,7 @@ class CarrierConfigs {
     if (code.length == 14) return CarrierType.libyana;
     if (code.length == 13) return CarrierType.almadar;
     if (code.length == 15) return CarrierType.ltt;
-    return CarrierType.unkown;
+    return CarrierType.unknown;
   }
 
   static String generateCode(CarrierType carreier, String code) {
@@ -17,7 +17,7 @@ class CarrierConfigs {
       case CarrierType.ltt:
         return '*116*$code#';
 
-      case CarrierType.unkown:
+      case CarrierType.unknown:
         return code;
     }
   }

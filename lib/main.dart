@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:odfinance/features/history/presentation/screens/history_dashboard.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() async {
@@ -17,9 +18,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      // title: 'Flutter Demo',
       //  theme:
-      //    home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const HistoryDashboardScreen(),
     );
   }
 }
