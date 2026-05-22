@@ -1,4 +1,4 @@
-# odfinance
+# Voucher Scanner
 
 A new Flutter project.
 
