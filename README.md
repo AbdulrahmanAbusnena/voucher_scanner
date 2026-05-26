@@ -29,22 +29,23 @@ Built using **Flutter**, managed reactively with **Riverpod**, and powered by de
 
 ## 🏗️ Architectural Layout
 
-The project follows a **Feature-First Clean Architecture** approach, keeping platform adapters entirely isolated from user interface logic:
+The project follows a **Feature-First Clean Architecture** approach
 
 ```directory
 lib/
 ├── core/
-│   ├── constants/       # Carrier USSD Dial prefixes & codes
-│   └── services/        # Low-level native platform services (Storage, Intent Dialers)
+│   ├── constants/  # prefixes and the dials are here
+    ├── constants/       
+│   └── util/        
 ├── shared/
-│   └── widgets/         # Reusable app-wide visual UI components
+│   └── widgets/         # Shared UI components 
 └── features/
-    ├── scanner/         # Camera hardware interface and live ML Kit frame parsing
+    ├── scanner/         # the Camera hardware and live Ml kit parsing is here
     │   └── presentation/
-    └── history/         # Offline transaction data ledger management
-        ├── data/        # JSON serialization handlers
-        ├── domain/      # Immutable Voucher and Carrier data models
-        └── presentation/# Dashboard metrics view and Riverpod state controllers
+    └── history/        
+        ├── data/         
+        ├── domain/       
+        └── presentation/# 
 ```
 
 ## more features are coming, and wait for it to get deployed into your native store
