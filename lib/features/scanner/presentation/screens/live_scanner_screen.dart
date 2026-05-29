@@ -62,13 +62,10 @@ class _LiveScannerScreenState extends ConsumerState<LiveScannerScreen> {
     });
 
     try {
-      // 1. Capture a high-resolution snapshot file saved temporarily to disk
       final XFile photoFile = await _cameraController.takePicture();
 
-      // 2. Wrap the photo file path directly into ML Kit's unified InputImage format
       final InputImage inputImage = InputImage.fromFilePath(photoFile.path);
 
-      // 3. Pass the static file to the OCR Engine
       final RecognizedText recognizedText = await _textRecognizer.processImage(
         inputImage,
       );
@@ -118,7 +115,6 @@ class _LiveScannerScreenState extends ConsumerState<LiveScannerScreen> {
     }
   }
 
-  // (Keep the exact same _handleDetectedVoucher method you had before)
   void _handleDetectedVoucher(String serialCode) async {
     final voucherNotifier = ref.read(historyProvider.notifier);
     final savedVoucher = await voucherNotifier.addVoucher(serialCode);
