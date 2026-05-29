@@ -3,11 +3,11 @@ import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class StorageService {
-  // Use the modern, decoupled asynchronous storage API instance
+  // usin the modern decoupled asynchronous storage API
   final SharedPreferencesAsync _prefs = SharedPreferencesAsync();
   static const String _historyKey = 'ly_voucher_history_log';
 
-  /// Serializes and commits a structured raw JSON map array map to disk storage.
+  /// this basically serializes
   Future<void> saveVoucherRawList(
     List<Map<String, dynamic>> rawJsonList,
   ) async {
@@ -15,7 +15,7 @@ class StorageService {
     await _prefs.setString(_historyKey, serializedString);
   }
 
-  /// Extracts historical string logs from persistence disk and parses them back to map entities.
+  /// here we are extracting  string logs from persistence and we're parssing them back
   Future<List<Map<String, dynamic>>> getVoucherRawList() async {
     final String? serializedString = await _prefs.getString(_historyKey);
 
